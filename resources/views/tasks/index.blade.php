@@ -33,6 +33,10 @@
                  <li><div id="element1"><i style="color:#ff8533; font-size:170%;" class="fa fa-thermometer-half" aria-hidden="true"></i> {{ $task->titre }}</div><div id="element2"><a href="tasks/status/{{ $task->id }}"><i class="fa fa-check-circle" aria-hidden="true"></i></a></div><div id="element3"><a href="tasks/show/{{ $task->id }}/edit"><i class="fa fa-wrench" aria-hidden="true"></i></a></div>
                  <div id="element4"><a href="tasks/delete/{{ $task->id }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div></li>
 
+           @elseif($task->category->name == "Hier")
+                 <li><div id="element1"><img id="img" src="/images/feu.png" alt="logo"> {{ $task->titre }}</div><div id="element2"><a href="tasks/status/{{ $task->id }}"><i class="fa fa-check-circle" aria-hidden="true"></i></a></div><div id="element3"><a href="tasks/show/{{ $task->id }}/edit"><i class="fa fa-wrench" aria-hidden="true"></i></a></div>
+                 <div id="element4"><a href="tasks/delete/{{ $task->id }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div></li>
+
            @else
                  <li><div id="element1"><i style="color:#ff0000; font-size:170%;" class="fa fa-thermometer-full" aria-hidden="true"></i> {{ $task->titre }}</div><div id="element2"><a href="tasks/status/{{ $task->id }}"><i class="fa fa-check-circle" aria-hidden="true"></i></a></div><div id="element3"><a href="tasks/show/{{ $task->id }}/edit"><i class="fa fa-wrench" aria-hidden="true"></i></a></div>
                  <div id="element4"><a href="tasks/delete/{{ $task->id }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div></li>

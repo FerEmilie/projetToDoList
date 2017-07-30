@@ -12,6 +12,13 @@ body {
   margin: auto;
 }
 
+#img {
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
 h1 {
   text-align: center;
   font-size: 80px;
